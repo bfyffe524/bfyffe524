@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+  <h2>CPS Access</h2>
+  <h3>Request Form</h3>
+ 
+  {% if success %}
+    <p>24/7 Ops have now received your request. We'll get back to you shortly. If you have any questions, you can e-mail us on digital.247operations@bbc.co.uk</p>
+    <p>----------------------------------------------</p>
+    <h2>Details of Your Request</h2>
+ 
+  {% else %}
+ 
+    {% for message in form.name.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.email.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.training.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.usersname.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in form.username.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.message.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    <form action="{{ url_for('contact') }}" method=post>
+      {{ form.hidden_tag() }}
+ 
+      {{ form.name.label }}
+      {{ form.name }}
+ 
+      {{ form.email.label }}
+      {{ form.email }}
+
+      {{ form.training.label }}
+      {{form.training}}
+      <div class="training"> 
+        <input type="checkbox" value="1" id="traininginput" name="check"/>
+        <label for="traininginput"></label>
+      </div>
+ 
+      {{ form.usersname.label }}
+      {{ form.usersname }}
+
+      {{ form.username.label }}
+      {{ form.username }}
+ 
+      {{ form.message.label }}
+      {{ form.message }}
+ 
+      {{ form.submit }}
+    </form>
+ 
+  {% endif %}
+{% endblock %}

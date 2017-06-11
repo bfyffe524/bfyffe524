@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center;
+  color: #304352;
+  color:-webkit-linear-gradient(to left, #d7d2cc, #304352); /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to left, #d7d2cc, #304352);
+  background: #8e9eab; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #8e9eab, #eef2f3); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #8e9eab, #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Create dark grey header with a white logo */
+
+header {
+  background-color: #2B2B2B;
+  height: 35px;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 10px;
+}
+
+header h1.logo {
+  margin: 0;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+}
+
+header h1.logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Center the body content */
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+div.jumbo {
+  padding: 10px 0 30px 0;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #999;
+}
+
+/* Display navigation links inline */
+
+.menu {
+  float: right;
+  margin-top: 8px;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu li + li {
+  margin-left: 35px;
+}
+
+.menu li a {
+  color: #999;
+  text-decoration: none;
+}
+
+/* Contact form */
+form label {
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0;
+}
+
+/* Message flashing */
+.flash {
+  padding: 10px;
+  width: 200px;
+  width: 100px;
+  text-align: center;
+   width: 940px;
+}
+
+form input#name,
+form input#email {
+  width: 400px;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  -webkit-border-radius: 3px;  
+     -moz-border-radius: 3px;  
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  font-size: 1.1em;
+}
+/**
+form input#training {
+  width: 10px;
+  height: 40px;
+  background: #333;
+  margin: 5px 10px;
+  border-radius: 50px;
+  position: relative;
+}
+**/
+
+.training {
+  width: 160px;
+  height: 40px;
+  background: #333;
+  border-radius: 50px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  text-indent: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.training:before {
+  content: 'No';
+  position: absolute;
+  top: 12px;
+  left: 19px;
+  height: 2px;
+  color: #FFF;
+  font-size: 16px;
+}
+
+.training:after {
+  content: 'Yes';
+  position: absolute;
+  top: 12px;
+  left: 115px;
+  height: 2px;
+  color: #26ca28;
+  font-size: 16px;
+}
+
+.training label {
+  display: flex
+  padding-left: 10px;
+  text-indent: -15px;;
+  width: 52px;
+  height: 4px;
+  border-radius: 50px;
+
+  transition: all .75s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 9px;
+  z-index: 1;
+  right: 6px;
+  background: #ddd;
+}
+
+/**
+ * Create the checkbox event for the label
+ */
+.training input[type=checkbox]:checked + label {
+  right: 100px;
+  background: #26ca28;
+}
+
+form input#usersname,
+form input#username {
+  width: 400px;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ece9e6, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  -webkit-border-radius: 3px;  
+     -moz-border-radius: 3px;  
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+form textarea#message {
+  width: 500px;
+  height: 100px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;  
+     -moz-border-radius: 3px;  
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+form input#submit {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  text-indent: center;
+  -webkit-border-radius: 3px; 
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border:1px solid #d8d8d8;
+  padding: 10px; 
+  font-weight:bold; 
+  color: #000000; 
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear,  top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
+}
+
+form input#submit:hover{
+  cursor: pointer;
+  border:1px solid #c1c1c1; 
+  background-color: #dbdbdb;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: linear-gradient(top, #dbdbdb, #cccccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
+}
